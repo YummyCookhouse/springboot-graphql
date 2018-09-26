@@ -1,0 +1,44 @@
+type Query {
+    pets: [Pet],
+    pet(id: Int): Pet
+}
+
+type Mutation {
+    saveDog(id:Int, name: String, age: Int, ownerId: Int, license: String) : Dog
+}
+
+type Owner {
+    name: String
+    age: Int
+    address: String
+}
+
+type Dog {
+    id: Int
+    type: Animal!
+    name: String
+    age: Int
+    license: String
+    owner: Owner
+}
+
+type Bird {
+    id: Int
+    type: Animal!
+    name: String
+    age: Int
+    wings: Int
+    owner: Owner
+}
+
+union Pet = Dog | Bird
+
+enum Animal {
+    DOG
+    BIRD
+}
+
+schema {
+    query: Query
+    mutation: Mutation
+}
