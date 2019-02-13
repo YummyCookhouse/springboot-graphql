@@ -1,9 +1,9 @@
 ## What this is?
-This is a demo project to show how to get graphql works with springboot
+This is an example to show how to get graphql works with springboot
 
 ## Dependencies
-- graphql-spring-boot-starter
-- graphql-java-tools
+- [graphql-spring-boot-starter](https://github.com/graphql-java-kickstart/graphql-spring-boot)
+- [graphql-java-tools](https://github.com/graphql-java-kickstart/graphql-java-tools)
 
 ## Reference
 - [GraphQL Java and SpringBoot](https://www.graphql-java.com/tutorials/getting-started-with-spring-boot/)
