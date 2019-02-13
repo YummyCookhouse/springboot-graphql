@@ -15,10 +15,10 @@ This is an example to show how to get graphql works with springboot
 - Union type
 - Field resolver
 - Mutation with input type
+- Fragment
 
 ## To be added
 - Defer
-- Fragment
 
 ## How to play
 1. Download [graphiql app](https://electronjs.org/apps/graphiql)
@@ -99,3 +99,35 @@ This is an example to show how to get graphql works with springboot
       }
     }
     ```
+    ##### Play with `fragment`
+    ```
+    query{
+      pets {
+        ...AllKindsOfPet
+      }
+    }
+    
+    fragment AllKindsOfPet on Pet {
+      ...on Dog {
+          type
+        	name
+        	owner {
+            name
+          }
+      }
+      ...on Bird {
+        	type
+          name
+        	owner {
+            name
+          }
+      }
+    }
+    ```
+    
+    ## Troubleshooting
+    >
+    Q: `Docs` doesn't work in `GraphiQL`
+
+    A: Click `Edit HTTP Headers` on right-top and add header `Authorization`
+    
