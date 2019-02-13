@@ -1,8 +1,11 @@
 package com.stardust.graphql.demo.resolvers;
 
 import com.coxautodev.graphql.tools.GraphQLMutationResolver;
+import com.stardust.graphql.demo.entities.Bird;
 import com.stardust.graphql.demo.entities.Dog;
 import com.stardust.graphql.demo.entities.Pet;
+import com.stardust.graphql.demo.entities.PetInput;
+import com.stardust.graphql.demo.enums.Animal;
 import com.stardust.graphql.demo.services.PetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -30,4 +33,14 @@ public class Mutation implements GraphQLMutationResolver {
         return dog;
     }
 
+    public Pet addPet(PetInput petInput) {
+        Pet pet;
+        if (petInput.getType().equals(Animal.BIRD)) {
+            pet = new Bird(petInput.getId(), petInput.getOwnerId(), petInput.getName(), petInput.getAge());
+        } else {
+            pet = new Dog(petInput.getId(), petInput.getOwnerId(), petInput.getName(), petInput.getAge(), petInput.getLicense());
+        }
+        petService.savePet(pet);
+        return pet;
+    }
 }

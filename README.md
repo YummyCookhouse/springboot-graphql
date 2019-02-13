@@ -5,12 +5,16 @@ This is a demo project to show how to get graphql works with springboot
 - graphql-spring-boot-starter
 - graphql-java-tools
 
+## Reference
+- [GraphQL Java and SpringBoot](https://www.graphql-java.com/tutorials/getting-started-with-spring-boot/)
+
 ## Already have
 - Query list
 - Query with arguments
 - Mutation
 - Union type
 - Field resolver
+- Mutation with input type
 
 ## To be added
 - Defer
@@ -76,4 +80,22 @@ This is a demo project to show how to get graphql works with springboot
          type
        }
      }
+    ```
+    ##### Create a pet with input type
+    ```
+    mutation {
+      addPet(pet: {
+        id: 99
+        ownerId: 1
+        name: "Mooo"
+        type: DOG
+        age: 10
+        license: "555555"
+      }) {
+        ...on Dog {
+          name
+          type
+        }
+      }
+    }
     ```

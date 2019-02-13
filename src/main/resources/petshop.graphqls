@@ -5,6 +5,7 @@ type Query {
 
 type Mutation {
     saveDog(id:Int, name: String, age: Int, ownerId: Int, license: String) : Dog
+    addPet(pet: PetInput): Pet
 }
 
 type Owner {
@@ -32,6 +33,16 @@ type Bird {
 }
 
 union Pet = Dog | Bird
+
+input PetInput {
+    id: Int
+    type: Animal
+    name: String
+    age: Int
+    ownerId: Int
+    license: String
+    wings: Int
+}
 
 enum Animal {
     DOG
