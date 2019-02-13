@@ -60,7 +60,7 @@ This is a demo project to show how to get graphql works with springboot
                 name
               }
             }
-          	...on Dog {
+        ...on Dog {
               name
               type
               license
@@ -68,7 +68,7 @@ This is a demo project to show how to get graphql works with springboot
                 name,
                 address
               }
-            }
+        }
       }
     }
     ```
@@ -76,9 +76,9 @@ This is a demo project to show how to get graphql works with springboot
     ```
      mutation {
      	saveDog(id:-1, name: "XXX", age: 12, ownerId: 2, license: "dssd") {
-         name
-         type
-       }
+             name
+             type
+        }
      }
     ```
     ##### Create a pet with input type
