@@ -1,10 +1,15 @@
+# Define how to read data from server
 type Query {
+    # Get all pets
     pets: [Pet],
+    # Get certain pet with unique id
     pet(id: Int): Pet
 }
 
+# Update data in server
 type Mutation {
-    saveDog(id:Int, name: String, age: Int, ownerId: Int, license: String) : Dog
+    saveDog(id:Int, name: String, age: Int, ownerId: Int, license: String) : Dog @deprecated(reason: "Replaced by addPet"),
+    # Add pet to data list
     addPet(pet: PetInput): Pet
 }
 

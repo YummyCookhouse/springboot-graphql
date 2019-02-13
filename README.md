@@ -7,6 +7,7 @@ This is an example to show how to get graphql works with springboot
 
 ## Reference
 - [GraphQL Java and SpringBoot](https://www.graphql-java.com/tutorials/getting-started-with-spring-boot/)
+- [GraphQL Java tools reference](https://www.graphql-java-kickstart.com/tools/)
 
 ## Already have
 - Query list

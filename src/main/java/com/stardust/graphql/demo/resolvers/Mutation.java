@@ -15,6 +15,7 @@ public class Mutation implements GraphQLMutationResolver {
     @Autowired
     private PetService petService;
 
+    @Deprecated
     public Dog saveDog(int id, String name, int age, int ownerId, String license) {
         Dog dog = null;
         if (id > 0) {
