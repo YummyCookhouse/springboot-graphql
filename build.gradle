@@ -29,6 +29,7 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'com.graphql-java-kickstart:graphql-spring-boot-starter:5.3.1'
     compile 'com.graphql-java-kickstart:graphql-java-tools:5.4.1'
+    compile 'com.google.guava:guava:27.1-jre'
     runtime 'org.springframework.boot:spring-boot-devtools'
     testCompile 'org.springframework.boot:spring-boot-starter-test'
     testCompile 'com.graphql-java-kickstart:graphql-spring-boot-starter-test:5.3.1'
