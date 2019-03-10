@@ -17,6 +17,7 @@ This is an example to show how to get graphql works with springboot
 - Field resolver
 - Mutation with input type
 - Fragment
+- Nested query
 
 ## To be added
 - Defer
@@ -126,9 +127,22 @@ This is an example to show how to get graphql works with springboot
     }
     ```
     
+    ##### Play with `nested query`
+    ```
+    query {
+      pets {
+        ...on Bird {
+          name
+          owner {
+            identifier(type: PASSPORT)
+          }
+        }
+      }
+    }  
+    ```
+    
     ## Troubleshooting
     >
     Q: `Docs` doesn't work in `GraphiQL`
 
     A: Click `Edit HTTP Headers` on right-top and add header `Authorization`
-    

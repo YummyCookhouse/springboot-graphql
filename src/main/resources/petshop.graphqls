@@ -17,6 +17,7 @@ type Owner {
     name: String
     age: Int
     address: String
+    identifier(type: PhotoIDType): String
 }
 
 type Dog {
@@ -52,6 +53,12 @@ input PetInput {
 enum Animal {
     DOG
     BIRD
+}
+
+enum PhotoIDType {
+    ID,
+    PASSPORT,
+    DRIVELICENSE
 }
 
 schema {
