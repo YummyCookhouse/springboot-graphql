@@ -1,4 +1,4 @@
-## What this is?
+## What is this?
 This is an example to show how to get graphql works with springboot
 
 ## Dependencies
@@ -9,7 +9,8 @@ This is an example to show how to get graphql works with springboot
 - [GraphQL Java and SpringBoot](https://www.graphql-java.com/tutorials/getting-started-with-spring-boot/)
 - [GraphQL Java tools reference](https://www.graphql-java-kickstart.com/tools/)
 
-## Already have
+## Features
+**Already have**
 - Query list
 - Query with arguments
 - Mutation
@@ -19,7 +20,7 @@ This is an example to show how to get graphql works with springboot
 - Fragment
 - Nested query
 
-## To be added
+**To be added**
 - Defer
 
 ## How to play
